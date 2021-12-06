@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>文本格式化工具</title>
+	<link rel="stylesheet" type="text/css" href="css/text-formatter.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/text-formatter.js"></script>
+</head>
+<body>
+	<div class="main-container">
+		<div class="header">
+			<div class="tab active" id="json-tab">JSON</div>
+			<div class="tab" id="xml-tab">XML</div>
+			<div class="tab" id="url-tab">URL</div>
+			<div class="tab" id="md5-tab">MD5</div>
+			<div class="tab" id="base64-tab">Base64</div>
+			<div class="tab">RSA</div>
+			<div class="tab">RC4</div>
+			<div class="tab">中文Unicode互转</div>
+			<div class="tab">驼峰下划线互转</div>
+		</div>
+		<div class="content">
+			<div class="top">
+				<div class="btn" id="format-btn">格式化</div>
+				<div class="btn" id="compress-btn">压缩</div>
+				<div class="btn" id="compress-and-escape-btn">压缩转义</div>
+				<div class="btn" id="remove-escape-btn">去除转义</div>
+				<div class="btn" id="json-to-xml-btn">转XML</div>
+			</div>
+			<div class="left">
+				<textarea id="source"></textarea>
+			</div>
+			<div class="right">
+				<textarea id="target" ></textarea>
+			</div>
+		</div>
+		<div class="footer">
+			<a href="https://github.com/lihthub/text-formatter" target="_blank">@lihthub</a>
+		</div>
+	</div>
+</body>
+</html>
