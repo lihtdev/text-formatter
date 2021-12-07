@@ -1,4 +1,4 @@
-# 文本格式化工具
+# Text Formatter 文本格式化工具
 
 ## JSON
 

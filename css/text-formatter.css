@@ -2,14 +2,15 @@
 	margin: 20px;
 	padding: 20px;
 	font-size: 16px;
+	color: #2E2E2E;
 }
 
 .header {
 	width: 1200px;
 	height: 80px;
 	margin: 0 auto;
-	border: 1px solid #6E6E6E;
-	border-radius: 25px 25px 0 0;
+	border: 1px solid #D8D8D8;
+	border-radius: 10px 10px 0 0;
 }
 
 .header .tab {
@@ -17,12 +18,12 @@
 	padding: 10px;
 	display: inline-block;
 	cursor: pointer;
-	font-weight: bold;
 }
 
 .header .tab.active {
-	border: 1px solid #6E6E6E;
-	border-radius: 20px;
+	border: 1px solid #D8D8D8;
+	border-radius: 15px;
+	font-weight: bold;
 }
 
 .content {
@@ -30,10 +31,10 @@
 	height: 650px;
 	margin: 0 auto;
 	border-top: 0;
-	border-bottom: 1px solid #6E6E6E;
-	border-left: 1px solid #6E6E6E;
-	border-right: 1px solid #6E6E6E;
-	border-radius: 0 0 25px 25px;
+	border-bottom: 1px solid #D8D8D8;
+	border-left: 1px solid #D8D8D8;
+	border-right: 1px solid #D8D8D8;
+	border-radius: 0 0 10px 10px;
 }
 
 .content .top {
@@ -63,12 +64,13 @@
 	width: 96%;
 	height: 96%;
 	padding: 10px;
-	border: 1px solid #6E6E6E;
+	border: 1px solid #D8D8D8;
 	resize: none;
 	overflow: auto;
 	white-space: nowrap;
 	font-size: 14px;
 	font-family: Console;
+	outline: none;
 }
 
 .content .right textarea {
@@ -80,7 +82,7 @@
 	padding: 5px;
 	height: 20px;
 	border-radius: 5px;
-	background-color: #D8D8D8;
+	background-color: #E6E6E6;
 	display: inline-block;
 	cursor: pointer;
 }
