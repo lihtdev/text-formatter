@@ -37,18 +37,24 @@
 	border-radius: 0 0 10px 10px;
 }
 
-.content .content-part {
-	
+.content .content-section,
+.content .content-head-section {
+	display: none;
 }
 
-.content .top {
+.content .content-head-section.active,
+.content .content-section.active {
+	display: block;
+}
+
+.content .content-head {
 	width: 90%;
 	padding: 10px 60px 0 60px;
 	display: inline-block;
 	text-align: center;
 }
 
-.content .left {
+.content .code-textarea {
 	margin: 20px 0 20px 60px;
 	padding: 0;
 	width: 500px;
@@ -57,16 +63,7 @@
 	border: 1px solid #D8D8D8;
 }
 
-.content .right {
-	margin: 20px 0 20px 60px;
-	padding: 0;
-	width: 500px;
-	height: 500px;
-	display: inline-block;
-	border: 1px solid #D8D8D8;
-}
-
-.content textarea {
+.content .code-textarea textarea {
 	width: 96%;
 	height: 96%;
 	padding: 10px;
@@ -77,6 +74,25 @@
 	font-size: 14px;
 	font-family: Console;
 	outline: none;
+}
+
+.content .string-textarea {
+	width: 1000px;
+	height: 230px;
+	border: 1px solid #D8D8D8;
+	margin: 30px auto;
+}
+
+.content .string-textarea textarea {
+	width: 990px;
+	height: 190px;
+	border: 0;
+	margin: 0 auto;
+	padding: 5px;
+	outline: none;
+	resize: none;
+	font-size: 14px;
+	font-family: Console;
 }
 
 .btn {

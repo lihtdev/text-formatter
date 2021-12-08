@@ -8,8 +8,13 @@
 	<link rel="stylesheet" href="plugins/codemirror/lib/codemirror.css">
 	<script type="text/javascript"  src="plugins/codemirror/lib/codemirror.js"></script>
 	<script type="text/javascript"  src="plugins/codemirror/mode/javascript/javascript.js"></script>
+	<script type="text/javascript"  src="plugins/base64.min.js"></script>
+	<script type="text/javascript"  src="plugins/md5.min.js"></script>
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/text-formatter.js"></script>
+	<script type="text/javascript" src="js/text-formatter-url.js"></script>
+	<script type="text/javascript" src="js/text-formatter-base64.js"></script>
+	<script type="text/javascript" src="js/text-formatter-md5.js"></script>
 </head>
 <body>
 	<div class="main-container">
@@ -21,25 +26,51 @@
 			<div class="tab" id="url-tab">URL</div>
 			<div class="tab" id="md5-tab">MD5</div>
 			<div class="tab" id="base64-tab">Base64</div>
-			<div class="tab">RSA</div>
-			<div class="tab">RC4</div>
-			<div class="tab">Unicode 中文互转</div>
-			<div class="tab">驼峰下划线互转</div>
+			<div class="tab" id="rsa-tab">RSA</div>
+			<div class="tab" id="rc4-tab">RC4</div>
+			<div class="tab" id="unicode-tab">Unicode 中文互转</div>
+			<div class="tab" id="camel-case-tab">驼峰下划线互转</div>
 		</div>
 		<div class="content">
-			<div class="top">
-				<div class="btn" id="format-btn">格式化</div>
-				<div class="btn" id="compress-btn">压缩</div>
-				<div class="btn" id="compress-and-escape-btn">压缩转义</div>
-				<div class="btn" id="remove-escape-btn">去除转义</div>
-				<div class="btn" id="json-to-xml-btn">转 XML</div>
-				<div class="btn" id="json-to-java-btn">转 Java</div>
+			<div class="content-head">
+				<div class="content-head-section json-content-head-section active">
+					<div class="btn" id="format-btn">格式化</div>
+					<div class="btn" id="compress-btn">压缩</div>
+					<div class="btn" id="compress-and-escape-btn">压缩转义</div>
+					<div class="btn" id="remove-escape-btn">去除转义</div>
+					<div class="btn" id="json-to-xml-btn">转 XML</div>
+					<div class="btn" id="json-to-java-btn">转 Java</div>
+				</div>
+				<div class="content-head-section url-content-head-section">
+					<div class="btn url-btn" data-fun="encodeURI">编码URL参数</div>
+					<div class="btn url-btn" data-fun="decodeURI">解码URL参数</div>
+					<div class="btn url-btn" data-fun="encodeURIComponent">编码整个URL</div>
+					<div class="btn url-btn" data-fun="decodeURIComponent">解码整个URL</div>
+				</div>
+				<div class="content-head-section md5-content-head-section">
+					<div class="btn" id="encode-md5-upper-case">编码（32位大写）</div>
+					<div class="btn" id="encode-md5-lower-case">编码（32位小写）</div>
+				</div>
+				<div class="content-head-section base64-content-head-section">
+					<div class="btn" id="encode-base64">编码</div>
+					<div class="btn" id="decode-base64">解码</div>
+				</div>
 			</div>
-			<div class="left">
-				<textarea id="source"></textarea>
+			<div class="content-section code-content-section active">
+				<div class="code-textarea">
+					<textarea id="code-source"></textarea>
+				</div>
+				<div class="code-textarea">
+					<textarea id="code-target"></textarea>
+				</div>
 			</div>
-			<div class="right">
-				<textarea id="target"></textarea>
+			<div class="content-section string-content-section">
+				<div class="string-textarea">
+					<textarea id="string-source"></textarea>
+				</div>
+				<div class="string-textarea">
+					<textarea id="string-target"></textarea>
+				</div>
 			</div>
 		</div>
 		<div class="footer">
