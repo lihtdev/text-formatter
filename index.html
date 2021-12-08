@@ -5,6 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Text Formatter</title>
 	<link rel="stylesheet" type="text/css" href="css/text-formatter.css">
+	<link rel="stylesheet" href="plugins/codemirror/lib/codemirror.css">
+	<script type="text/javascript"  src="plugins/codemirror/lib/codemirror.js"></script>
+	<script type="text/javascript"  src="plugins/codemirror/mode/javascript/javascript.js"></script>
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/text-formatter.js"></script>
 </head>
@@ -13,6 +16,8 @@
 		<div class="header">
 			<div class="tab active" id="json-tab">JSON</div>
 			<div class="tab" id="xml-tab">XML</div>
+			<div class="tab" id="java-tab">Java</div>
+			<div class="tab" id="sql-tab">SQL</div>
 			<div class="tab" id="url-tab">URL</div>
 			<div class="tab" id="md5-tab">MD5</div>
 			<div class="tab" id="base64-tab">Base64</div>
@@ -27,13 +32,14 @@
 				<div class="btn" id="compress-btn">压缩</div>
 				<div class="btn" id="compress-and-escape-btn">压缩转义</div>
 				<div class="btn" id="remove-escape-btn">去除转义</div>
-				<div class="btn" id="json-to-xml-btn">转XML</div>
+				<div class="btn" id="json-to-xml-btn">转 XML</div>
+				<div class="btn" id="json-to-java-btn">转 Java</div>
 			</div>
 			<div class="left">
 				<textarea id="source"></textarea>
 			</div>
 			<div class="right">
-				<textarea id="target" ></textarea>
+				<textarea id="target"></textarea>
 			</div>
 		</div>
 		<div class="footer">
