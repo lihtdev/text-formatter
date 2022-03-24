@@ -28,8 +28,8 @@
 			<div class="tab" id="base64-tab">Base64</div>
 			<div class="tab" id="rsa-tab"><del>RSA</del></div>
 			<div class="tab" id="rc4-tab"><del>RC4</del></div>
-			<div class="tab" id="unicode-tab"><del>Unicode 中文互转</del></div>
-			<div class="tab" id="camel-case-tab"><del>驼峰下划线互转</del></div>
+			<div class="tab" id="unicode-tab"><del>Unicode</del></div>
+			<div class="tab" id="camel-case-tab" title="驼峰/下划线"><del>Camel-Case / Underscore</del></div>
 		</div>
 		<div class="content">
 			<div class="content-head">
@@ -38,14 +38,15 @@
 					<div class="btn" id="compress-btn">压缩</div>
 					<div class="btn" id="compress-and-escape-btn">压缩转义</div>
 					<div class="btn" id="remove-escape-btn">去除转义</div>
+					<div class="btn" id="remove-explain-btn">去除注释</div>
 					<div class="btn" id="json-to-xml-btn">转 XML</div>
 					<div class="btn" id="json-to-java-btn">转 Java</div>
 				</div>
 				<div class="content-head-section url-content-head-section">
-					<div class="btn url-btn" data-fun="encodeURI">编码URL参数</div>
-					<div class="btn url-btn" data-fun="decodeURI">解码URL参数</div>
-					<div class="btn url-btn" data-fun="encodeURIComponent">编码整个URL</div>
-					<div class="btn url-btn" data-fun="decodeURIComponent">解码整个URL</div>
+					<div class="btn url-btn" title="decodeURI" data-fun="encodeURI">编码URL参数</div>
+					<div class="btn url-btn" title="decodeURI" data-fun="decodeURI">解码URL参数</div>
+					<div class="btn url-btn" title="decodeURIComponent" data-fun="encodeURIComponent">编码整个URL</div>
+					<div class="btn url-btn" title="decodeURIComponent" data-fun="decodeURIComponent">解码整个URL</div>
 				</div>
 				<div class="content-head-section md5-content-head-section">
 					<div class="btn" id="encode-md5-upper-case">编码（32位大写）</div>

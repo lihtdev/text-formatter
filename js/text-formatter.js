@@ -36,7 +36,7 @@ $(function() {
 			targetTextArea.setValue(targetText);
 		} catch (err) {
 			console.error(err);
-			targetTextArea.setValue('JSON格式不正确');
+			targetTextArea.setValue('JSON格式不正确！');
 		}
 	});
 
@@ -49,7 +49,7 @@ $(function() {
 			targetTextArea.setValue(targetText);
 		} catch (err) {
 			console.error(err);
-			targetTextArea.setValue('JSON格式不正确');
+			targetTextArea.setValue('JSON格式不正确！');
 		}
 	});
 
@@ -63,7 +63,7 @@ $(function() {
 			targetTextArea.setValue(targetText);
 		} catch (err) {
 			console.error(err);
-			targetTextArea.setValue('JSON格式不正确');
+			targetTextArea.setValue('JSON格式不正确！');
 		}
 	});
 
@@ -75,7 +75,23 @@ $(function() {
 			targetTextArea.setValue(sourceObj);
 		} catch (err) {
 			console.error(err);
-			targetTextArea.setValue('JSON格式不正确');
+			targetTextArea.setValue('JSON格式不正确！');
+		}
+	});
+
+	// 去除注释
+	$('#remove-explain-btn').on('click', function() {
+		let sourceText = sourceTextArea.getValue();
+		sourceText = sourceText.replace(/\/\/.*/g, '');
+		sourceText = sourceText.replace(/\/\*.*\*\//g, '');
+		try {
+			let sourceObj = JSON.parse(sourceText);
+			let targetText = JSON.stringify(sourceObj, null, 4);
+			targetTextArea.setValue(targetText);
+		} catch (err) {
+			console.error(err);
+			targetTextArea.setValue(sourceText + '\n=====================================\nJSON格式不正确，但已帮您去除注释！');
+			alert("JSON格式不正确，但已帮您去除注释！");
 		}
 	});
 
@@ -88,7 +104,7 @@ $(function() {
 			targetTextArea.setValue(targetText);
 		} catch (err) {
 			console.error(err);
-			targetTextArea.setValue('JSON格式不正确');
+			targetTextArea.setValue('JSON格式不正确！');
 		}
 	});
 
