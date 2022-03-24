@@ -6,8 +6,9 @@
 2. 压缩
 3. 转义
 4. 去除转义
-5. 转XML
-6. 转Java（TODO）
+5. 去除注释
+6. 转XML
+7. 转Java（TODO）
 
 ## XML
 

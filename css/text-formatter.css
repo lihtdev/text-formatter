@@ -3,10 +3,11 @@
   --content-height: 650px;
   --header-height: 80px;
 
-  --tab-font-color: #2bbc8a;
+  --tab-color: #2bbc8a;
   --border-color: #D8D8D8;
   --btn-background-color: #E6E6E6;
-  --main-font-color: #383838;
+  --main-color: #383838;
+  --footer-color: #2bbc8a;
 
   --main-font-family: "Menlo", "Meslo LG", "PingFang SC", sans-serif, monospace;
   --code-font-family: Console;
@@ -21,7 +22,7 @@
 	padding: 0;
 	font-family: var(--main-font-family);
 	font-size: var(--main-font-size);
-	color: var(--main-font-color);
+	color: var(--main-color);
 }
 
 .header {
@@ -37,7 +38,7 @@
 	padding: 10px;
 	display: inline-block;
 	cursor: pointer;
-	color: var(--tab-font-color);
+	color: var(--tab-color);
 }
 
 .header .tab.active {
@@ -132,4 +133,21 @@
 	width: var(--content-width);
 	margin: 10px auto;
 	text-align: center;
+	color: var(--footer-color);
+	font-size: var(--btn-font-size);
+}
+
+a:link {
+	color: var(--footer-color);
+	text-decoration: none;
+}
+
+a:visited {
+	color: var(--footer-color);
+	text-decoration: none;
+}
+
+a:hover {
+	color: var(--footer-color);
+	text-decoration: underline;
 }
