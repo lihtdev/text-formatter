@@ -90,8 +90,8 @@ $(function() {
 			targetTextArea.setValue(targetText);
 		} catch (err) {
 			console.error(err);
-			targetTextArea.setValue(sourceText + '\n===============================\nJSON格式不正确！');
-			alert("JSON格式不正确，但已帮您去除注释！");
+			targetTextArea.setValue(sourceText + '\n============================================\nJSON格式不正确，但已帮你去除注释！');
+			alert("JSON格式不正确，但已帮你去除注释！");
 		}
 	});
 
