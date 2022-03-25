@@ -84,6 +84,7 @@ $(function() {
 		let sourceText = sourceTextArea.getValue();
 		sourceText = sourceText.replace(/\/\/.*/g, '');
 		sourceText = sourceText.replace(/\/\*.*\*\//g, '');
+		sourceText = sourceText.replace(/- *(\[|\{)/g, '$1');
 		try {
 			let sourceObj = JSON.parse(sourceText);
 			let targetText = JSON.stringify(sourceObj, null, 4);
