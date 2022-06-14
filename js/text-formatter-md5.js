@@ -30,4 +30,34 @@ $(function() {
 		}
 	});
 
+	$('#encode-md5-upper-case-batch').on('click', function() {
+		let sourceText = $('#string-source').val();
+		let targetText = new Array();
+		let sourceTextArr = sourceText.split('\n');
+		for (let item of sourceTextArr) {
+			try {
+				targetText.push(md5(item).toUpperCase());
+			} catch (err) {
+				console.error(err);
+				$('#string-target').val("格式不正确");
+			}
+		}
+		$('#string-target').val(targetText.join('\n'));
+	});
+
+	$('#encode-md5-lower-case-batch').on('click', function() {
+		let sourceText = $('#string-source').val();
+		let targetText = new Array();
+		let sourceTextArr = sourceText.split('\n');
+		for (let item of sourceTextArr) {
+			try {
+				targetText.push(md5(item));
+			} catch (err) {
+				console.error(err);
+				$('#string-target').val("格式不正确");
+			}
+		}
+		$('#string-target').val(targetText.join('\n'));
+	});
+
 });
